@@ -4,14 +4,12 @@ steps:
     plugins:
       - docker-compose#v3.5.0:
           run: app
-      - xwlee/expandable#v1.0.2:
+      - xwlee/expandable#v1.0.4:
           files:
-            - /path/to/file/1
-            - /path/to/file/2
-          directories:
-            - /path/1
-            - /path/2
+            - index.js
+          # directories:
+          #   - /path/1
+          #   - /path/2
           properties:
-            Hirer.login_id: ENV.login_id # env value
-            Hirer.password: ENV.password # env value
-            Debug.level: error # literal value
+            HIRER_NAME: jshirer
+    artifact_paths: index.js
