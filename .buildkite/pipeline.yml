@@ -11,4 +11,6 @@ steps:
             - tests
           properties:
             HIRER_NAME: jshirer
-    artifact_paths: index.js
+    artifact_paths:
+      - index.js
+      - tests/**/*
